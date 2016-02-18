@@ -101,7 +101,7 @@ def create_graph(stats):
             # Add the edge using a weight and label
             g.add_edge(caller_key, callee_key,
                        weight=call.totaltime,
-                       label=call.totaltime,
+                       label='x%d, %f' % (call.callcount, call.totaltime),
                        attr_dict=call_attrs)
 
     return g
